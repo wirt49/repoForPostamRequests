@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "5e37d1e6-53cf-4a3d-ae19-088772ec4398",
+		"name": "MovieDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get latest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/latest?api_key=37b14871bd15e80c63176f3cb301bf4b&language=en-US",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate movie",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true,
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "wirt1998",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "wirt49",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 8.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/555/rating?api_key=37b14871bd15e80c63176f3cb301bf4b&Content-Type=application/json;charset=utf-8",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"555",
+						"rating"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get changes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/550/changes?api_key=37b14871bd15e80c63176f3cb301bf4b&page=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"550",
+						"changes"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_token\": \"8d055e6225d29d8bb7479915f8ad009714ec2248\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.themoviedb.org/3/authentication/session/new?api_key=37b14871bd15e80c63176f3cb301bf4b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"authentication",
+						"session",
+						"new"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get person info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/person/10?api_key=37b14871bd15e80c63176f3cb301bf4b&language=en-US",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"person",
+						"10"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie lists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/549/lists?api_key=37b14871bd15e80c63176f3cb301bf4b&language=en-US&page=2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"549",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/authentication/token/new?api_key=37b14871bd15e80c63176f3cb301bf4b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"authentication",
+						"token",
+						"new"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the keywords that have been added to a movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/550/keywords?api_key=37b14871bd15e80c63176f3cb301bf4b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"550",
+						"keywords"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recomendatio for a movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/550/recommendations?api_key=37b14871bd15e80c63176f3cb301bf4b&language=en-US&page=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"550",
+						"recommendations"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/551/reviews?api_key=37b14871bd15e80c63176f3cb301bf4b&language=en-US&page=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"551",
+						"reviews"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get upcoming",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/guest_session/6f6089650c73837766bc28286431c160/rated/movies?api_key=37b14871bd15e80c63176f3cb301bf4b&language=en-US&sort_by=created_at.asc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"guest_session",
+						"6f6089650c73837766bc28286431c160",
+						"rated",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "37b14871bd15e80c63176f3cb301bf4b"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						},
+						{
+							"key": "sort_by",
+							"value": "created_at.asc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzN2IxNDg3MWJkMTVlODBjNjMxNzZmM2NiMzAxYmY0YiIsInN1YiI6IjYxZTJiZTA5ZTBlYzUxMDA2NTdmODA1NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jB5hLcP6yF7efvc7tUweY5Ejvo2noQkwLpEBoKNuY_M",
+			"type": "string"
+		}
+	]
+}
